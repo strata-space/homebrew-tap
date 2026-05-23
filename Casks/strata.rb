@@ -11,16 +11,16 @@ cask "strata" do
 
   pkg "strata-darwin-universal.pkg"
 
-  uninstall pkgutil: "space.strata.app",
+  uninstall pkgutil: "space.strata.cli",
             delete:  [
-              "/Applications/Strata.app",
+              "/Applications/Strata CLI.app",
               "/usr/local/bin/strata",
             ]
 
   zap trash: [
     "~/Library/Application Support/Strata",
-    "~/Library/Caches/space.strata.app",
+    "~/Library/Caches/space.strata.cli",
     "~/Library/Logs/Strata",
-    "~/Library/Preferences/space.strata.app.plist",
+    "~/Library/Preferences/space.strata.cli.plist",
   ]
 end
