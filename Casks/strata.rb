@@ -7,7 +7,11 @@ cask "strata" do
   desc "AI-empowered document editing with native macOS filesystem mount"
   homepage "https://strata.space"
 
-  depends_on macos: :sequoia
+  # The bundled CLI binary (Contents/Helpers/strata) targets macOS 11+, so
+  # `strata link` live-sync works on Big Sur and newer. `strata mount` (FSKit)
+  # additionally needs macOS 15.4 and is gated at runtime by `detect_backend()`,
+  # which prints an actionable "macOS 15.4+ required" error on older systems.
+  depends_on macos: :big_sur
 
   pkg "strata-darwin-universal.pkg"
 
