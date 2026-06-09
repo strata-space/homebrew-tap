@@ -7,7 +7,7 @@ cask "strata" do
   desc "AI-empowered document editing with native macOS filesystem mount"
   homepage "https://strata.space"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   pkg "strata-darwin-universal.pkg"
 
