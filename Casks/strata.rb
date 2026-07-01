@@ -1,6 +1,6 @@
 cask "strata" do
-  version "3.4.1"
-  sha256 "f5f66b824191746829b87c13f836eaf30664119e66d724b635e77f58d9b674c7"
+  version "3.4.2"
+  sha256 "d9c600ffbb477e0cb5cc54164014a15e8d3bdbcca98877ec7881ca1d72b62d62"
 
   url "https://github.com/strata-space/strata/releases/download/cli-v#{version}/strata-darwin-universal.pkg"
   name "Strata"
